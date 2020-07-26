@@ -7,7 +7,7 @@ This assignment mainly contains code to
 - truncation with out using math library functions or int constructor
 - rounding with out using round functions
 
-##encoded_from_base10
+## encoded_from_base10
 
 This function returns a string encoding in the "base" for the the "number" using the "digit_map"
 
@@ -27,8 +27,7 @@ Conditions that this function must satisfy:
 Whether or not two values are considered close is determined according to given absolute and relative tolerances. This function is used for floating point equality.
 
 This is the formula for calculation of tolerance
-
-​    tot = max(rel_tol * max(abs(a), abs(b)), abs_tol)
+tot = max(rel_tol * max(abs(a), abs(b)), abs_tol)
 
 If the difference of the numbers is less than or equal to the tolerance, then the two floating number are considered as equals.
 
@@ -42,7 +41,7 @@ If no errors occur, the result will be: abs(a-b) <= max(rel_tol * max(abs(a), ab
 
 The IEEE 754 special values of NaN, inf, and -inf will be handled according to IEEE rules. Specifically, NaN is not considered close to any other value, including NaN. inf and -inf are only considered close to themselves.
 
-##math.trunc(*x*)
+## math.trunc(*x*)
 
 Performs truncation operation to return the Real value *x* truncated to an Integral (usually an integer).
 
@@ -60,16 +59,16 @@ bin(-10)
 
 ## hex
 
-Convert an integer number to a lowercase hexadecimal string prefixed with “0x”. If x is not a Python int object, it has to define an \__index__() method that returns an integer. Some examples: > > > hex(255) '0xff' hex(-42) '-0x2a'
+Convert an integer number to a lowercase hexadecimal string prefixed with “0x”. If x is not a Python int object, it has to define an \__index__() method that returns an integer.
 
-##round
+## round
 
 Return number rounded to ndigits precision after the decimal point. If ndigits is omitted or is None, it returns the nearest integer to its input.
 
-###Round half to even (Banker's Rounding)
+### Round half to even (Banker's Rounding)
 
 A tie-breaking rule without positive/negative bias and without bias toward/away from zero is round half to even.
 
-###Round half away from zero
+### Round half away from zero
 
-The other tie-breaking method commonly taught and used is the round half away from zero (or round half towards infinity), namely: If the fraction of x is exactly 0.5, then y = x + 0.5 if x is positive, and y = x − 0.5 if x is negative.
+The other tie-breaking method commonly taught and used is the round half away from zero (or round half towards infinity), namely: If the fraction of x is exactly 0.5, then y = x + 0.5 if x is positive, and y = x - 0.5 if x is negative.
